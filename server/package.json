@@ -1,0 +1,27 @@
+{
+    "name": "NarcoticsAnonymous",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "NODE_ENV=test nodemon --exec 'mocha --recursive -R min'",
+        "start": "nodemon server.js",
+        "client": "npm start --prefix ../client",
+        "seed": "mongo na --eval 'printjson(db.dropDatabase())' && mongoimport --db=na --collection=members --file=db_seed/members.json && mongoimport --db=na --collection=meetings --file=db_seed/meetings.json && mongoimport --db=na --collection=activities --file=db_seed/activities.json",
+        "app": "concurrently npm \"npm start\" \"npm run client\" "
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^6.5.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mocha": "^10.1.0",
+        "mongoose": "^7.2.0",
+        "supertest": "^6.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.12"
+    }
+}

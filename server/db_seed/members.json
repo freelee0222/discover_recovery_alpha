@@ -1,0 +1,14 @@
+{
+	"firstName" : "freebee",
+	"lastName" : "clements",
+    "age" : "39",
+    "gender": "male",
+	"phone" : "(901)372-3542",
+	"cleanDay" : "2016-10-24",
+	"email" : "jeffrey.clements.3022690@tlm.cloud",
+    "password" : "1234",
+    "homegroup" : "Dopeless Hopefiends",
+	"sponsorName" : "Brent Baer",
+    "isSponsor" : true,
+    "isAdmin": true
+}
